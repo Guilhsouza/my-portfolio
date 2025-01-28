@@ -11,6 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        hotyellow: "#FFD966",
+        goldyellow: "#bf9b30"
       },
     },
   },
