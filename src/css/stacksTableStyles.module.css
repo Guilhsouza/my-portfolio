@@ -1,0 +1,15 @@
+.textStyle {
+    color: #bdbebd;
+    font-size: 1.35rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+
+.tableShadow {
+    box-shadow:  
+    rgba(38, 57, 77, 0.6) -5px 5px,  
+    rgba(38, 57, 77, 0.45) -10px 10px,  
+    rgba(38, 57, 77, 0.3) -15px 15px,  
+    rgba(38, 57, 77, 0.2) -20px 20px,  
+    rgba(38, 57, 77, 0.1) -25px 25px;
+}
