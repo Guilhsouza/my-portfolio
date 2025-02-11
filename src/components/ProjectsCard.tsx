@@ -1,18 +1,19 @@
 import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card"
 import Image, { StaticImageData } from "next/image"
+import { ReactNode } from "react"
 
 interface ProjectCardBody {
     headerContent: string,
     bodyImage: string | StaticImageData,
     altImage: string,
-    stacks: string[],
+    stacks: ReactNode[],
     description: string
 }
 
 const ProjectCard: React.FC<ProjectCardBody> = ({ headerContent, bodyImage, altImage, stacks, description }) => {
     return (
         <>
-            <Card className="flex max-w-[370px] bg-gray-900 rounded-lg">
+            <Card className="max-w-[370px] flex-col bg-gray-900 rounded-lg">
                 <CardHeader className="flex justify-center text-xl">
                     {headerContent}
                 </CardHeader>
@@ -22,7 +23,9 @@ const ProjectCard: React.FC<ProjectCardBody> = ({ headerContent, bodyImage, altI
                         alt={altImage}
                         className="rounded-md"
                     />
-                    {stacks}
+                    <div className="flex gap-2 mt-4">
+                        {stacks}
+                    </div>
                 </CardBody>
                 <CardFooter>
                     {description}
