@@ -1,17 +1,19 @@
 'use client'
 
 import Image from "next/image";
-import imagemTeste from '@/icons/imagemTeste.jpg'
-import { Kanit } from 'next/font/google'
-import styles from '@/css/portfolioImageStyle.module.css'
+import imagemTeste from '@/icons/imagemTeste.jpg';
+import { Kanit } from 'next/font/google';
+import styles from '@/css/portfolioImageStyle.module.css';
 import ScrollArrow from "@/components/Scrollicon";
-import tableStyles from '@/css/stacksTableStyles.module.css'
+import tableStyles from '@/css/stacksTableStyles.module.css';
 import TableContent from '@/components/TableContent';
+import ProjectCard from "@/components/ProjectsCard";
 import {
-  javaIcon, jsIcon, htmlIcon, cssIcon, reactIcon, nextIcon, tailwindIcon, nodeIcon,
+  javaIcon, htmlIcon, cssIcon, reactIcon, nextIcon, tailwindIcon, nodeIcon,
   expressIcon, postgresIcon, mongoIcon, dockerIcon, gitHubIcon, gitIcon, postmanIcon,
   wppIcon, linkedinIcon, githubDarkIcon
-} from '@/icons/index.js'
+} from '@/icons/index.js';
+import GenericIcon from "@/components/stacksIcons/GenericIcon";
 
 const kanit = Kanit({ weight: '400' })
 const waveEmoji = <span role="img" aria-label="waveHand">👋</span>
@@ -75,7 +77,7 @@ export default function Home() {
 
       <div id="technologies" className="w-full text-center">
         <h3 className="text-4xl mb-12 underline underline-offset-3">Tecnologias e Ferramentas</h3>
-        <div className={`flex justify-evenly my-40 py-12 mx-72 gap-6 border-2 rounded-3xl bg-gray-900 ${tableStyles.tableShadow}`}>
+        <div className={`flex justify-evenly my-32 py-12 mx-72 gap-6 border-2 rounded-3xl bg-gray-900 ${tableStyles.tableShadow}`}>
           <div>
             <h3 className="text-3xl pb-6 font-semibold">Front-End</h3>
             <div>
@@ -108,13 +110,32 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div>
-          <h3 className="text-4xl underline underline-offset-3">Projetos</h3>
+      <div>
+        <h3 className="text-4xl underline underline-offset-3 text-center">Projetos</h3>
+        <div className="my-32 grid grid-cols-4 justify-items-center">
+          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} altImage='Imagem'
+            stacks={
+              [
+                <GenericIcon bgColor={'#61DAFB'} fontColor="#030609" iconName="React" />,
+                <GenericIcon bgColor={'#030609'} fontColor="#fff" iconName="NextJS" />
+              ]}
+            description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
 
-
+          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} altImage='Imagem' stacks={['card']}
+            description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
+          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} altImage='Imagem' stacks={['card']}
+            description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
+          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} altImage='Imagem' stacks={['card']}
+            description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
         </div>
       </div>
-    </div >
+
+      <div>
+        <h3 className="text-4xl underline underline-offset-3 text-center">Entre em contato comigo!</h3>
+
+      </div>
+    </div>
   );
-}
+} 
