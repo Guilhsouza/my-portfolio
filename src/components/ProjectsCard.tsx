@@ -1,6 +1,7 @@
 import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card"
 import Image, { StaticImageData } from "next/image"
 import { ReactNode } from "react"
+import ImageWithModal from "./ImageWithModal"
 
 interface ProjectCardBody {
     headerContent: string,
@@ -17,11 +18,10 @@ const ProjectCard: React.FC<ProjectCardBody> = ({ headerContent, bodyImage, altI
                 <CardHeader className="flex justify-center text-xl">
                     {headerContent}
                 </CardHeader>
-                <CardBody>
-                    <Image
-                        src={bodyImage}
-                        alt={altImage}
-                        className="rounded-md"
+                <CardBody id="imageFromProjects">
+                    <ImageWithModal
+                        bodyImage={bodyImage}
+                        altImage={altImage}
                     />
                     <div className="flex gap-2 mt-4">
                         {stacks}
