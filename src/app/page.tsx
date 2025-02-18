@@ -118,8 +118,8 @@ export default function Home() {
           <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} altImage='Imagem'
             stacks={
               [
-                <GenericIcon bgColor={'#61DAFB'} fontColor="#030609" iconName="React" />,
-                <GenericIcon bgColor={'#030609'} fontColor="#fff" iconName="NextJS" />
+                <GenericIcon bgColor={'#61DAFB'} fontColor="#030609" iconName="React" key={1} />,
+                <GenericIcon bgColor={'#030609'} fontColor="#fff" iconName="NextJS" key={2} />
               ]}
             description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
 
