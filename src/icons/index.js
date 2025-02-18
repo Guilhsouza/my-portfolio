@@ -18,7 +18,7 @@ import postmanIcon from './tools/postmanicon.svg'
 
 import githubDarkIcon from './socialMedias/github.svg'
 import wppIcon from './socialMedias/whatsapp.svg'
-import linkedinIcon from './socialMedias/whatsapp.svg'
+import linkedinIcon from './socialMedias/linkedin.svg'
 
 export {
     jsIcon, htmlIcon, cssIcon, reactIcon, nextIcon, tailwindIcon,
