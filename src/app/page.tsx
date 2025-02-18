@@ -15,7 +15,7 @@ import {
 } from '@/icons/index.js';
 import GenericIcon from "@/components/stacksIcons/GenericIcon";
 
-const kanit = Kanit({ weight: '400' })
+const kanit = Kanit({ weight: '400', subsets: ['latin'] })
 const waveEmoji = <span role="img" aria-label="waveHand">👋</span>
 
 export default function Home() {
