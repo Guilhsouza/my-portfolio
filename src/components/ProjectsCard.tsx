@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card"
-import Image, { StaticImageData } from "next/image"
+import { StaticImageData } from "next/image"
 import { ReactNode } from "react"
 import ImageWithModal from "./ImageWithModal"
 
