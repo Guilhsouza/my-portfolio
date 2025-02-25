@@ -27,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardBody> = ({ headerContent, bodyImage, altI
                         {stacks}
                     </div>
                 </CardBody>
-                <CardFooter>
+                <CardFooter className="text-justify pb-6">
                     {description}
                 </CardFooter>
             </Card>
