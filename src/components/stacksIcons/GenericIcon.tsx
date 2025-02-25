@@ -10,9 +10,9 @@ const GenericIcon: React.FC<GenericIconBody> = ({ bgColor, iconName, fontColor }
             <p
                 style={{
                     backgroundColor: bgColor,
-                    color: fontColor
+                    color: fontColor,
                 }}
-                className={'rounded-lg px-5'}>{iconName}</p>
+                className={'rounded-full px-2.5'}>{iconName}</p>
         </>
     )
 }
