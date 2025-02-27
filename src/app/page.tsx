@@ -43,7 +43,7 @@ export default function Home() {
             <div id='socialMedias' className="flex gap-3 items-center">
               <div id='linkedinIcon'>
                 <a href="https://www.linkedin.com/in/Guilhsouza" target="_blank">
-                  <Image alt="GitHub icon" src={linkedinIcon} width={40} className="rounded-lg" />
+                  <Image alt="Linkedin icon" src={linkedinIcon} width={40} className="rounded-lg" />
                 </a>
               </div>
               <div id='githubIcon'>
@@ -53,7 +53,7 @@ export default function Home() {
               </div>
               <div id='wppIcon'>
                 <a href="http://wa.me/5512991112772" target="_blank">
-                  <Image alt="GitHub icon" src={wppIcon} width={40} />
+                  <Image alt="Wpp icon" src={wppIcon} width={40} />
                 </a>
               </div>
             </div>
@@ -121,7 +121,8 @@ export default function Home() {
                 <GenericIcon bgColor={'#61DAFB'} fontColor="#030609" iconName="React" key={1} />,
                 <GenericIcon bgColor={'#030609'} fontColor="#fff" iconName="NextJS" key={2} />
               ]}
-            description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
+            description="O Império Sofás Estoque é um sistema baseado no estilo ERP, porém, com uma curva de aprendizado mais simples. 
+            O objetivo do projeto é entregar controle e praticidade para o lojista no gerenciamento de vendas e estoque." />
 
           <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} altImage='Imagem' stacks={['card']}
             description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
