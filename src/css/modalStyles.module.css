@@ -6,8 +6,6 @@
     bottom: auto;
     transform: translate(-50%, -50%);
     border-radius: 4px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 3;
 }
 
@@ -19,4 +17,37 @@
     bottom: 0;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.6);
+}
+
+.closeModal {
+    border: none;
+    display: inline-block;
+    padding: 14px 20px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.modalContent {
+    border: 1 solid #1b4f50;
+    color: #000;
+    background-color: #f1c40f;
+    padding: 3px 10px 3px 10px;
+    transition: .3s;
+}
+
+.modalContent:hover {
+    transition: .3s;
+    border: 1 solid transparent;
+    color: #fff;
+    background-color: #000;
+}
+
+.topright {
+    position: absolute;
+    right: 0;
+    top: 0
 }
