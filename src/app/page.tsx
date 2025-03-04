@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import imagemTeste from '@/icons/imagemTeste.jpg';
+import { imagemTeste, arvore, castelo2 } from '@/images/index';
 import { Kanit } from 'next/font/google';
 import styles from '@/css/portfolioImageStyle.module.css';
 import ScrollArrow from "@/components/Scrollicon";
@@ -115,7 +115,7 @@ export default function Home() {
       <div>
         <h3 className="text-4xl underline underline-offset-3 text-center">Projetos</h3>
         <div className="my-32 grid grid-cols-4 justify-items-center">
-          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} altImage='Imagem'
+          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} image2={castelo2} image3={arvore} altImage='Imagem'
             stacks={
               [
                 <GenericIcon bgColor={'#61DAFB'} fontColor="#030609" iconName="React" key={1} />,
@@ -124,11 +124,11 @@ export default function Home() {
             description="O Império Sofás Estoque é um sistema baseado no estilo ERP, porém, com uma curva de aprendizado mais simples. 
             O objetivo do projeto é entregar controle e praticidade para o lojista no gerenciamento de vendas e estoque." />
 
-          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} altImage='Imagem' stacks={['card']}
+          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} image2={castelo2} image3={arvore} altImage='Imagem' stacks={['card']}
             description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
-          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} altImage='Imagem' stacks={['card']}
+          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} image2={castelo2} image3={arvore} altImage='Imagem' stacks={['card']}
             description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
-          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} altImage='Imagem' stacks={['card']}
+          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} image2={castelo2} image3={arvore} altImage='Imagem' stacks={['card']}
             description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
         </div>
       </div>
