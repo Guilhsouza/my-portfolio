@@ -1,19 +1,22 @@
 'use client'
 
 import Image from "next/image";
-import { imagemTeste, arvore, castelo2 } from '@/images/index';
 import { Kanit } from 'next/font/google';
 import styles from '@/css/portfolioImageStyle.module.css';
 import ScrollArrow from "@/components/Scrollicon";
 import tableStyles from '@/css/stacksTableStyles.module.css';
 import TableContent from '@/components/TableContent';
 import ProjectCard from "@/components/ProjectsCard";
+import GenericIcon from "@/components/stacksIcons/GenericIcon";
+
+import {
+  imagemTeste, imperioEstoqueCamasEColchoes, imperioEstoqueSofas, imperioSofasMenu
+} from '@/images/index';
 import {
   javaIcon, htmlIcon, cssIcon, reactIcon, nextIcon, tailwindIcon, nodeIcon,
   expressIcon, postgresIcon, mongoIcon, dockerIcon, gitHubIcon, gitIcon, postmanIcon,
   wppIcon, linkedinIcon, githubDarkIcon
 } from '@/icons/index.js';
-import GenericIcon from "@/components/stacksIcons/GenericIcon";
 
 const kanit = Kanit({ weight: '400', subsets: ['latin'] })
 const waveEmoji = <span role="img" aria-label="waveHand">👋</span>
@@ -21,8 +24,6 @@ const waveEmoji = <span role="img" aria-label="waveHand">👋</span>
 export default function Home() {
   return (
     <div id='body' className={`${kanit.className} h-full`}>
-
-      <button className="flex justify-center w-full">alterar tema</button>
 
       <div className="flex justify-center w-full my-40">
         <div className="max-w-5xl">
@@ -114,21 +115,35 @@ export default function Home() {
 
       <div>
         <h3 className="text-4xl underline underline-offset-3 text-center">Projetos</h3>
-        <div className="my-32 grid grid-cols-4 justify-items-center">
-          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} image2={castelo2} image3={arvore} altImage='Imagem'
+        <div className="my-32 grid grid-cols-2 gap-y-16 justify-items-center">
+          <ProjectCard
+            headerContent={`Império Sofás Estoque`}
+            bodyImage={imperioSofasMenu}
+            image2={imperioEstoqueSofas}
+            image3={imperioEstoqueCamasEColchoes}
+            altImage='Menu Império Sofás'
             stacks={
               [
                 <GenericIcon bgColor={'#61DAFB'} fontColor="#030609" iconName="React" key={1} />,
-                <GenericIcon bgColor={'#030609'} fontColor="#fff" iconName="NextJS" key={2} />
+                <GenericIcon bgColor={'#030609'} fontColor="#fff" iconName="NextJS" key={2} />,
+                <GenericIcon bgColor={'#334155'} fontColor="#fff" iconName="Tailwind CSS" key={3} />,
+                <GenericIcon bgColor={'#8CC84B'} fontColor="#030609" iconName="NodeJS" key={4} />,
+                <GenericIcon bgColor={'#336791'} fontColor="#fff" iconName="postgreSQL" key={5} />,
               ]}
             description="O Império Sofás Estoque é um sistema baseado no estilo ERP, porém, com uma curva de aprendizado mais simples. 
             O objetivo do projeto é entregar controle e praticidade para o lojista no gerenciamento de vendas e estoque." />
 
-          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} image2={castelo2} image3={arvore} altImage='Imagem' stacks={['card']}
+          <ProjectCard headerContent="API de estoque online"
+            bodyImage={imagemTeste}
+            image2={imagemTeste}
+            image3={imagemTeste}
+            altImage='Imagem'
+            stacks={['card']}
+            description="Uma api" />
+
+          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} image2={imagemTeste} image3={imagemTeste} altImage='Imagem' stacks={['card']}
             description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
-          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} image2={castelo2} image3={arvore} altImage='Imagem' stacks={['card']}
-            description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
-          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} image2={castelo2} image3={arvore} altImage='Imagem' stacks={['card']}
+          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} image2={imagemTeste} image3={imagemTeste} altImage='Imagem' stacks={['card']}
             description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
         </div>
       </div>
