@@ -38,12 +38,14 @@ const ImageWithModal: React.FC<ImageWIthModalBody> = ({ bodyImage, image2, image
     return (
         <>
             <div>
-                <Image
-                    src={bodyImage}
-                    alt={altImage}
-                    className="rounded-lg cursor-pointer"
-                    onClick={openModal}
-                />
+                <div>
+                    <Image
+                        src={bodyImage}
+                        alt={altImage}
+                        className="rounded-lg h-80 cursor-pointer"
+                        onClick={openModal}
+                    />
+                </div>
 
                 <Modal
                     isOpen={isOpen}
@@ -53,17 +55,15 @@ const ImageWithModal: React.FC<ImageWIthModalBody> = ({ bodyImage, image2, image
                     preventScroll={true}
                 >
                     <div>
-                        <Carousel className="w-full max-w-2xl">
+                        <Carousel className="w-full h-full">
                             <CarouselContent >
                                 {images.map((image, index) => (
                                     <CarouselItem key={index} >
                                         <div className="flex justify-center">
-                                            <div className=" w-[650px] h-[600px] relative overflow-hidden">
+                                            <div className="overflow-hidden">
                                                 <Image
                                                     src={image}
-                                                    alt={`imagem ${index + 1} `}
-                                                    layout="fill"
-                                                    objectFit="cover"
+                                                    alt={`imagem ${index + 1}`}
                                                     className="rounded-xl cursor-grab object-cover"
                                                 />
                                             </div>
