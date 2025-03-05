@@ -1,5 +1,6 @@
-import arvore from './arvore.jpg'
-import castelo2 from './castelo2.jpg'
+import imperioEstoqueSofas from './imperioEstoqueSofas.png'
+import imperioSofasMenu from './imperioSofasMenu.png'
+import imperioEstoqueCamasEColchoes from './imperioEstoqueCamasEColchoes.png'
 import imagemTeste from './imagemTeste.jpg'
 
-export { arvore, castelo2, imagemTeste }
+export { imperioEstoqueSofas, imperioSofasMenu, imperioEstoqueCamasEColchoes, imagemTeste }
