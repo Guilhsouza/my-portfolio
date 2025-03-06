@@ -37,6 +37,7 @@
     background-color: #f1c40f;
     padding: 3px 10px 3px 10px;
     transition: .3s;
+    z-index: 99;
 }
 
 .modalContent:hover {
