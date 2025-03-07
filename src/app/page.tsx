@@ -10,7 +10,8 @@ import ProjectCard from "@/components/ProjectsCard";
 import GenericIcon from "@/components/stacksIcons/GenericIcon";
 
 import {
-  imagemTeste, imperioEstoqueCamasEColchoes, imperioEstoqueSofas, imperioSofasMenu
+  imagemTeste, imperioEstoqueCamasEColchoes, imperioEstoqueSofas, imperioSofasMenu,
+  postmanApiEstoque, swagger1, swagger2
 } from '@/images/index';
 import {
   javaIcon, htmlIcon, cssIcon, reactIcon, nextIcon, tailwindIcon, nodeIcon,
@@ -124,22 +125,32 @@ export default function Home() {
             altImage='Menu Império Sofás'
             stacks={
               [
-                <GenericIcon bgColor={'#61DAFB'} fontColor="#030609" iconName="React" key={1} />,
-                <GenericIcon bgColor={'#030609'} fontColor="#fff" iconName="NextJS" key={2} />,
-                <GenericIcon bgColor={'#334155'} fontColor="#fff" iconName="Tailwind CSS" key={3} />,
-                <GenericIcon bgColor={'#8CC84B'} fontColor="#030609" iconName="NodeJS" key={4} />,
-                <GenericIcon bgColor={'#336791'} fontColor="#fff" iconName="postgreSQL" key={5} />,
+                <GenericIcon bgColor={'#61DAFB'} fontColor={"#030609"} iconName="React" key={1} />,
+                <GenericIcon bgColor={'#030609'} fontColor={"#fff"} iconName="NextJS" key={2} />,
+                <GenericIcon bgColor={'#334155'} fontColor={"#fff"} iconName="Tailwind CSS" key={3} />,
+                <GenericIcon bgColor={'#8CC84B'} fontColor={"#030609"} iconName="NodeJS" key={4} />,
+                <GenericIcon bgColor={'#336791'} fontColor={"#fff"} iconName="postgreSQL" key={5} />,
               ]}
             description="O Império Sofás Estoque é um sistema baseado no estilo ERP, porém, com uma curva de aprendizado mais simples. 
             O objetivo do projeto é entregar controle e praticidade para o lojista no gerenciamento de vendas e estoque." />
 
           <ProjectCard headerContent="API de estoque online"
-            bodyImage={imagemTeste}
-            image2={imagemTeste}
-            image3={imagemTeste}
-            altImage='Imagem'
-            stacks={['card']}
-            description="Uma api" />
+            bodyImage={postmanApiEstoque}
+            image2={swagger1}
+            image3={swagger2}
+            altImage='Imagem do postman'
+            stacks={[
+              <GenericIcon bgColor={'#F7DF1E'} fontColor={"#030609"} iconName="JavaScript" key={11} />,
+              <GenericIcon bgColor={'#8CC84B'} fontColor={"#030609"} iconName="NodeJS" key={12} />,
+              <GenericIcon bgColor={'#000'} fontColor={"#fff"} iconName="Express.js" key={13} />,
+              <GenericIcon bgColor={'#000'} fontColor={"#fff"} iconName="JWT (JSON Web Token)" key={14} />,
+              <GenericIcon bgColor={'#C21325'} fontColor={"#fff"} iconName="JEST" key={15} />,
+              <GenericIcon bgColor={'#85EA2D'} fontColor={"#030609"} iconName="Swagger" key={17} />,
+              <GenericIcon bgColor={'#FF6C37'} fontColor={"#fff"} iconName="Postman" key={18} />,
+            ]}
+            description={`A principal ideia deste projeto é oferecer operações CRUD de usuário e estoque em um ambiente online.
+              Os usuários podem criar uma conta e fazer operações de estoque, como criar e excluir tabelas, editar os produtos e fazer buscas específicas.
+              Todo esse sistema foi desenvolvido no modelo RESTFUL com autenticação ao usuário e testes unitários.`} />
 
           <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} image2={imagemTeste} image3={imagemTeste} altImage='Imagem' stacks={['card']}
             description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
