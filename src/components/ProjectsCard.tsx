@@ -27,11 +27,11 @@ const ProjectCard: React.FC<ProjectCardBody> = ({ headerContent, bodyImage, imag
                         image3={image3}
                         altImage={altImage}
                     />
-                    <div className="flex gap-2 mt-4">
+                    <div className="flex flex-wrap gap-2 mt-4">
                         {stacks}
                     </div>
                 </CardBody>
-                <CardFooter className="text-justify pb-6">
+                <CardFooter className="text-justify h-full flex self-center pb-6">
                     {description}
                 </CardFooter>
             </Card>
