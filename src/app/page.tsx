@@ -11,7 +11,7 @@ import GenericIcon from "@/components/stacksIcons/GenericIcon";
 
 import {
   imagemTeste, imperioEstoqueCamasEColchoes, imperioEstoqueSofas, imperioSofasMenu,
-  postmanApiEstoque, swagger1, swagger2
+  postmanApiEstoque, swagger1, swagger2, githubPdv, pdvPostman, prsDoPdv
 } from '@/images/index';
 import {
   javaIcon, htmlIcon, cssIcon, reactIcon, nextIcon, tailwindIcon, nodeIcon,
@@ -116,7 +116,7 @@ export default function Home() {
 
       <div>
         <h3 className="text-4xl underline underline-offset-3 text-center">Projetos</h3>
-        <div className="my-32 grid grid-cols-2 gap-y-16 justify-items-center">
+        <div className="my-32 grid lg:grid-cols-2 xl:grid-cols-3 md:grid-cols-1 gap-16 mx-8 justify-items-center">
           <ProjectCard
             headerContent={`Império Sofás Estoque`}
             bodyImage={imperioSofasMenu}
@@ -131,8 +131,9 @@ export default function Home() {
                 <GenericIcon bgColor={'#8CC84B'} fontColor={"#030609"} iconName="NodeJS" key={4} />,
                 <GenericIcon bgColor={'#336791'} fontColor={"#fff"} iconName="postgreSQL" key={5} />,
               ]}
-            description="O Império Sofás Estoque é um sistema baseado no estilo ERP, porém, com uma curva de aprendizado mais simples. 
-            O objetivo do projeto é entregar controle e praticidade para o lojista no gerenciamento de vendas e estoque." />
+            description="O Império Sofás Estoque é um sistema real utilizado pela loja, baseado no estilo ERP, 
+            o projeto entrega controle e praticidade para o lojista no gerenciamento de vendas e estoque, porém, 
+            com uma curva de aprendizado mais simples." />
 
           <ProjectCard headerContent="API de estoque online"
             bodyImage={postmanApiEstoque}
@@ -147,15 +148,31 @@ export default function Home() {
               <GenericIcon bgColor={'#C21325'} fontColor={"#fff"} iconName="JEST" key={15} />,
               <GenericIcon bgColor={'#85EA2D'} fontColor={"#030609"} iconName="Swagger" key={17} />,
               <GenericIcon bgColor={'#FF6C37'} fontColor={"#fff"} iconName="Postman" key={18} />,
+              <GenericIcon bgColor={'#336791'} fontColor={"#fff"} iconName="postgreSQL" key={19} />,
+
             ]}
             description={`A principal ideia deste projeto é oferecer operações CRUD de usuário e estoque em um ambiente online.
               Os usuários podem criar uma conta e fazer operações de estoque, como criar e excluir tabelas, editar os produtos e fazer buscas específicas.
               Todo esse sistema foi desenvolvido no modelo RESTFUL com autenticação ao usuário e testes unitários.`} />
 
-          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} image2={imagemTeste} image3={imagemTeste} altImage='Imagem' stacks={['card']}
-            description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
-          <ProjectCard headerContent="Império Sofás Estoque" bodyImage={imagemTeste} image2={imagemTeste} image3={imagemTeste} altImage='Imagem' stacks={['card']}
-            description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iusto." />
+          <ProjectCard
+            headerContent="API PDV Frente de Caixa"
+            bodyImage={pdvPostman}
+            image2={githubPdv}
+            image3={prsDoPdv}
+            altImage='Imagem'
+            stacks={[
+              <GenericIcon bgColor={'#F7DF1E'} fontColor={"#030609"} iconName="JavaScript" key={21} />,
+              <GenericIcon bgColor={'#8CC84B'} fontColor={"#030609"} iconName="NodeJS" key={22} />,
+              <GenericIcon bgColor={'#000'} fontColor={"#fff"} iconName="Express.js" key={23} />,
+              <GenericIcon bgColor={'#000'} fontColor={"#fff"} iconName="JWT (JSON Web Token)" key={24} />,
+              <GenericIcon bgColor={'#336791'} fontColor={"#fff"} iconName="postgreSQL" key={25} />,
+
+            ]}
+            description="O PDV é um sistema de frente de caixa desenvolvido em conjunto com alguns colegas. Ele conta
+            com operações de vendas, gerenciamento de clientes, usuários e produtos. Além da capacidade de adicionar 
+            produtos ao banco de dados, incluindo o envio de imagens associadas, também conta com um sistema de verificação por e-mail 
+            após a conclusão de uma compra." />
         </div>
       </div>
 
