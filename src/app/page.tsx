@@ -1,5 +1,6 @@
 'use client'
 
+import '../css/formStyles.css'
 import Image from "next/image";
 import { Kanit } from 'next/font/google';
 import styles from '@/css/portfolioImageStyle.module.css';
@@ -26,7 +27,7 @@ export default function Home() {
   return (
     <div id='body' className={`${kanit.className} h-full`}>
 
-      <div className="flex justify-center w-full my-40">
+      <section className="flex justify-center w-full my-40">
         <div className="max-w-5xl">
           <div className="text-center">
             <h3 className="text-3xl">Olá! {waveEmoji}</h3>
@@ -71,13 +72,13 @@ export default function Home() {
             className={`rounded-full border-hotyellow border-2 ${styles.imageShadow}`}
           />
         </div>
-      </div>
+      </section>
 
-      <div className="mt-4 mb-32 flex justify-center">
+      <div className="mt-4 mb-36 flex justify-center">
         <ScrollArrow />
       </div>
 
-      <div id="technologies" className="w-full text-center">
+      <section id="technologies" className="w-full text-center">
         <h3 className="text-4xl mb-12 underline underline-offset-3">Tecnologias e Ferramentas</h3>
         <div className={`flex justify-evenly my-32 py-12 mx-72 gap-6 border-2 rounded-3xl bg-gray-900 ${tableStyles.tableShadow}`}>
           <div>
@@ -112,9 +113,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div>
+      <section>
         <h3 className="text-4xl underline underline-offset-3 text-center">Projetos</h3>
         <div className="my-32 grid lg:grid-cols-2 xl:grid-cols-3 md:grid-cols-1 gap-16 mx-8 justify-items-center">
           <ProjectCard
@@ -174,12 +175,36 @@ export default function Home() {
             produtos ao banco de dados, incluindo o envio de imagens associadas, também conta com um sistema de verificação por e-mail 
             após a conclusão de uma compra." />
         </div>
-      </div>
+      </section>
 
-      <div>
-        <h3 className="text-4xl underline underline-offset-3 text-center">Entre em contato comigo!</h3>
+      <section className='flex flex-col justify-center items-center w-full'>
+        <h3 className="text-4xl underline underline-offset-3 text-center mb-32">Entre em contato comigo!</h3>
+        <div className="items-center max-w-[1200px] bg-gray-900 p-5 rounded-lg w-full">
+          <form action="https://api.staticforms.xyz/submit" method="post" className='w-full'>
 
-      </div>
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex flex-col w-full">
+                <label htmlFor="name">Nome</label>
+                <input type="text" name="name" id="name" placeholder="Digite o seu nome" autoComplete="off" required />
+              </div>
+              <div className=" flex flex-col w-full">
+                <label htmlFor="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Digite o seu email" required />
+              </div>
+            </div>
+
+            <div className="mt-8 flex flex-col">
+              <label htmlFor="message">Mensagem</label>
+              <textarea rows={6} name="message" id="message" placeholder="Tudo bem?! Vi o seu perfil..." required />
+            </div>
+
+            <button type="submit"
+              className="mt-6 bg-blue-500 text-white px-6 py-3 rounded-lg w-full hover:bg-blue-600 transition">Enviar Mensagem!</button>
+
+            <input type="hidden" name="accessKey" value="8acca2e0-0223-4fdd-b3bd-c6271ac665f3" />
+          </form>
+        </div>
+      </section>
     </div>
   );
 } 
