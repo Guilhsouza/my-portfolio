@@ -5,11 +5,32 @@
     padding-bottom: 0.6rem;
 }
 
+.tableStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1280px;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    gap: 2rem;
+    border: 2px solid #FFF;
+    border-radius: 1.5rem;
+}
+
 .tableShadow {
-    box-shadow:  
-    rgba(38, 57, 77, 0.6) -5px 5px,  
-    rgba(38, 57, 77, 0.45) -10px 10px,  
-    rgba(38, 57, 77, 0.3) -15px 15px,  
-    rgba(38, 57, 77, 0.2) -20px 20px,  
-    rgba(38, 57, 77, 0.1) -25px 25px;
+    box-shadow:
+        rgba(38, 57, 77, 0.6) -5px 5px,
+        rgba(38, 57, 77, 0.45) -10px 10px,
+        rgba(38, 57, 77, 0.3) -15px 15px,
+        rgba(38, 57, 77, 0.2) -20px 20px,
+        rgba(38, 57, 77, 0.1) -25px 25px;
+}
+
+@media (min-width: 640px) {
+    .tableStyle {
+        flex-direction: row;
+    }
 }
