@@ -25,17 +25,17 @@ const waveEmoji = <span role="img" aria-label="waveHand">👋</span>
 
 export default function Home() {
   return (
-    <div id='body' className={`${kanit.className} h-full`}>
+    <div className={`${kanit.className} w-full min-h-screen`}>
 
-      <section className="flex justify-center w-full my-40">
+      <section className="apresentation">
         <div className="max-w-5xl">
           <div className="text-center">
-            <h3 className="text-3xl">Olá! {waveEmoji}</h3>
-            <h2 className="text-6xl">Eu me chamo Guilherme Souza</h2>
-            <h3 className={"text-3xl text-hotyellow "}>Desenvolvedor Fullstack</h3>
+            <h3 className="text-lg md:text-2xl lg:text-3xl xl:text-4xl">Olá! {waveEmoji}</h3>
+            <h2 className="text-xl md:text-3xl lg:text-4xl xl:text-6xl">Eu me chamo Guilherme Souza</h2>
+            <h3 className={"text-2xl lg:text-3xl  text-hotyellow"}>Desenvolvedor Fullstack</h3>
           </div>
 
-          <p className="text-xl mt-16">
+          <p className="text-md mt-16 lg:text-lg xl:text-xl">
             Entusiasta em construir sistemas e criar soluções criativas sempre com foco no usuário final, encontro
             motivação transformando boas ideias em realidade.
           </p>
@@ -80,39 +80,42 @@ export default function Home() {
 
       <section id="technologies" className="w-full text-center">
         <h3 className="text-4xl mb-12 underline underline-offset-3">Tecnologias e Ferramentas</h3>
-        <div className={`flex justify-evenly my-32 py-12 mx-72 gap-6 border-2 rounded-3xl bg-gray-900 ${tableStyles.tableShadow}`}>
-          <div>
-            <h3 className="text-3xl pb-6 font-semibold">Front-End</h3>
+        <div className='flex justify-center'>
+          <div className={`mx-8 bg-gray-900 ${tableStyles.tableShadow} ${tableStyles.tableStyle}`}>
             <div>
-              <TableContent alt="htmlIcon" src={htmlIcon} content="HTML" />
-              <TableContent alt="cssIcon" src={cssIcon} content="CSS" />
-              <TableContent alt="reactIcon" src={reactIcon} content="React.js" />
-              <TableContent alt="nextIcon" src={nextIcon} content="Next.js" />
-              <TableContent alt="tailwindIcon" src={tailwindIcon} content="Tailwind CSS" />
+              <h3 className="text-3xl pb-6 font-semibold">Front-End</h3>
+              <div>
+                <TableContent alt="htmlIcon" src={htmlIcon} content="HTML" />
+                <TableContent alt="cssIcon" src={cssIcon} content="CSS" />
+                <TableContent alt="reactIcon" src={reactIcon} content="React.js" />
+                <TableContent alt="nextIcon" src={nextIcon} content="Next.js" />
+                <TableContent alt="tailwindIcon" src={tailwindIcon} content="Tailwind CSS" />
+              </div>
             </div>
-          </div>
-
-          <div>
-            <h3 className="text-3xl pb-6 font-semibold">Back-End</h3>
+            <hr />
             <div>
-              <TableContent alt="nodeIcon" src={nodeIcon} content="Node.js" />
-              <TableContent alt="expressIcon" src={expressIcon} content="Express.js" />
-              <TableContent alt="postgresIcon" src={postgresIcon} content="PostgreSQL" />
-              <TableContent alt="postgresIcon" src={mongoIcon} content="MongoDB" />
-              <TableContent alt="javaIcon" src={javaIcon} content="JAVA" />
+              <h3 className="text-3xl pb-6 font-semibold">Back-End</h3>
+              <div>
+                <TableContent alt="nodeIcon" src={nodeIcon} content="Node.js" />
+                <TableContent alt="expressIcon" src={expressIcon} content="Express.js" />
+                <TableContent alt="postgresIcon" src={postgresIcon} content="PostgreSQL" />
+                <TableContent alt="postgresIcon" src={mongoIcon} content="MongoDB" />
+                <TableContent alt="javaIcon" src={javaIcon} content="JAVA" />
+              </div>
             </div>
-          </div>
-
-          <div>
-            <h3 className="text-3xl pb-6 font-semibold">Ferramentas</h3>
+            <hr />
             <div>
-              <TableContent alt="gitIcon" src={gitIcon} content="Git" />
-              <TableContent alt="gitHubIcon" src={gitHubIcon} content="GitHub" />
-              <TableContent alt="postmanIcon" src={postmanIcon} content="Postman" />
-              <TableContent alt="dockerIcon" src={dockerIcon} content="Docker" />
+              <h3 className="text-3xl pb-6 font-semibold">Ferramentas</h3>
+              <div>
+                <TableContent alt="gitIcon" src={gitIcon} content="Git" />
+                <TableContent alt="gitHubIcon" src={gitHubIcon} content="GitHub" />
+                <TableContent alt="postmanIcon" src={postmanIcon} content="Postman" />
+                <TableContent alt="dockerIcon" src={dockerIcon} content="Docker" />
+              </div>
             </div>
           </div>
         </div>
+
       </section>
 
       <section>
@@ -205,6 +208,6 @@ export default function Home() {
           </form>
         </div>
       </section>
-    </div>
+    </div >
   );
 } 
