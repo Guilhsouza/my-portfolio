@@ -10,8 +10,16 @@
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .imageWrapper {
-        max-width: 230px;
+        margin-left: 0;
+        max-width: 270px;
+        margin-top: 1.6rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .imageWrapper {
+        margin-right: 1rem;
     }
 }
