@@ -16,7 +16,7 @@ interface ProjectCardBody {
 const ProjectCard: React.FC<ProjectCardBody> = ({ headerContent, bodyImage, image2, image3, altImage, stacks, description }) => {
     return (
         <>
-            <Card className="max-w-[660px] flex-col bg-gray-900 rounded-lg">
+            <Card className="p-1 max-w-[660px] flex-col bg-gray-900 rounded-lg">
                 <CardHeader className="flex justify-center">
                     <p className="text-center text-xl">{headerContent}</p>
                 </CardHeader>
