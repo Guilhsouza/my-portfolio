@@ -1,6 +1,6 @@
 'use client'
 
-import '../css/formStyles.css'
+import '../css/apresentationStyle.css'
 import Image from "next/image";
 import { Kanit } from 'next/font/google';
 import styles from '@/css/portfolioImageStyle.module.css';
@@ -9,6 +9,7 @@ import tableStyles from '@/css/stacksTableStyles.module.css';
 import TableContent from '@/components/TableContent';
 import ProjectCard from "@/components/ProjectsCard";
 import GenericIcon from "@/components/stacksIcons/GenericIcon";
+import { useRef } from 'react';
 
 import {
   imagemTeste, imperioEstoqueCamasEColchoes, imperioEstoqueSofas, imperioSofasMenu,
@@ -24,26 +25,33 @@ const kanit = Kanit({ weight: '400', subsets: ['latin'] })
 const waveEmoji = <span role="img" aria-label="waveHand">👋</span>
 
 export default function Home() {
+  const refContact = useRef<HTMLDivElement | null>(null)
+
+  const scrollToContactSection = () => {
+    refContact.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <div className={`${kanit.className} w-full min-h-screen`}>
 
       <section className="apresentation">
-        <div className="max-w-5xl">
+        <div className="max-w-5xl mx-4">
           <div className="text-center">
             <h3 className="text-lg md:text-2xl lg:text-3xl xl:text-4xl">Olá! {waveEmoji}</h3>
-            <h2 className="text-xl md:text-3xl lg:text-4xl xl:text-6xl">Eu me chamo Guilherme Souza</h2>
-            <h3 className={"text-2xl lg:text-3xl  text-hotyellow"}>Desenvolvedor Fullstack</h3>
+            <h2 className="text-xl md:text-3xl lg:text-3xl xl:text-5xl">Eu me chamo Guilherme Souza</h2>
+            <h3 className={"text-xl md:text-2xl lg:text-3xl  text-hotyellow"}>Desenvolvedor Fullstack</h3>
           </div>
 
-          <p className="text-md mt-16 lg:text-lg xl:text-xl">
+          <p className="text-md mt-16 lg:text-lg xl:text-xl text-justify">
             Entusiasta em construir sistemas e criar soluções criativas sempre com foco no usuário final, encontro
             motivação transformando boas ideias em realidade.
           </p>
 
-          <div className="flex justify-between align-middle mt-8">
-            <button className="p-3 text-hotyellow border-2 border-solid border-hotyellow">Entre em contato comigo! </button>
+          <div className="flex flex-col sm:flex-row items-center w-full justify-between align-middle mt-6 md:mt-8">
+            <button className="p-2 lg:p-3 text-hotyellow border-2 border-solid w-full max-w-[250px] border-hotyellow"
+              onClick={scrollToContactSection}>Entre em contato comigo!</button>
 
-            <div id='socialMedias' className="flex gap-3 items-center">
+            <div id='socialMedias' className="flex gap-3 items-center mt-4 md:mt-0">
               <div id='linkedinIcon'>
                 <a href="https://www.linkedin.com/in/Guilhsouza" target="_blank">
                   <Image alt="Linkedin icon" src={linkedinIcon} width={40} className="rounded-lg" />
@@ -63,7 +71,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.imageWrapper}>
+        <div className={`${styles.imageWrapper}`}>
           <Image
             alt="Minha foto"
             src={imagemTeste}
@@ -115,7 +123,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
       </section>
 
       <section>
@@ -180,7 +187,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='flex flex-col justify-center items-center w-full'>
+      <section ref={refContact} className='flex flex-col justify-center items-center w-full'>
         <h3 className="text-4xl underline underline-offset-3 text-center mb-32">Entre em contato comigo!</h3>
         <div className="items-center max-w-[1200px] bg-gray-900 p-5 rounded-lg w-full">
           <form action="https://api.staticforms.xyz/submit" method="post" className='w-full'>
