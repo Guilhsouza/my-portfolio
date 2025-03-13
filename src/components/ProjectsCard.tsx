@@ -27,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardBody> = ({ headerContent, bodyImage, imag
                         image3={image3}
                         altImage={altImage}
                     />
-                    <div className="flex flex-wrap gap-2 mt-4">
+                    <div className="flex flex-wrap gap-2 mt-4 pb-2 md:pb-1">
                         {stacks}
                     </div>
                 </CardBody>
