@@ -42,7 +42,7 @@ const ImageWithModal: React.FC<ImageWIthModalBody> = ({ bodyImage, image2, image
                     <Image
                         src={bodyImage}
                         alt={altImage}
-                        className="rounded-lg h-80 cursor-pointer"
+                        className="rounded-lg h-80 lg:h-64 xl:h-64 2xl:h-80 cursor-pointer"
                         onClick={openModal}
                     />
                 </div>
