@@ -16,11 +16,11 @@ interface ProjectCardBody {
 const ProjectCard: React.FC<ProjectCardBody> = ({ headerContent, bodyImage, image2, image3, altImage, stacks, description }) => {
     return (
         <>
-            <Card className="p-1 max-w-[660px] flex-col bg-gray-900 rounded-lg">
-                <CardHeader className="flex justify-center">
+            <Card className="p-2 max-w-[600px] flex-col bg-gray-900 rounded-lg">
+                <CardHeader className="flex justify-center py-2">
                     <p className="text-center text-xl">{headerContent}</p>
                 </CardHeader>
-                <CardBody id="imageFromProjects">
+                <CardBody id="imageFromProjects" className="p-2">
                     <ImageWithModal
                         bodyImage={bodyImage}
                         image2={image2}
@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardBody> = ({ headerContent, bodyImage, imag
                         {stacks}
                     </div>
                 </CardBody>
-                <CardFooter className="text-justify h-full flex self-center pb-6">
+                <CardFooter className="text-justify h-full flex self-center p-2">
                     {description}
                 </CardFooter>
             </Card>
