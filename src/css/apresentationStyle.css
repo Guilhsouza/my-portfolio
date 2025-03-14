@@ -4,14 +4,36 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-bottom: 10rem;
     gap: 2rem;
+}
+
+.btnStyle {
+    padding: .5rem;
+    color: #ffd966;
+    border: 2px solid #ffd966;
+    width: 100%;
+    max-width: 250px;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.btnStyle:hover {
+    color: #000;
+    background-color: #ffd966;
+    transition: 0.3s;
 }
 
 @media (min-width: 768px) {
     .apresentation {
         flex-direction: row;
         margin-top: 10rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .btnStyle {
+        padding: .75rem;
     }
 }
