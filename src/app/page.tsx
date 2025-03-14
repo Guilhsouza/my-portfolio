@@ -48,7 +48,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center w-full justify-between align-middle mt-6 md:mt-8">
-            <button className="p-2 lg:p-3 text-hotyellow border-2 border-solid w-full max-w-[250px] border-hotyellow"
+            <button className="btnStyle"
               onClick={scrollToContactSection}>Entre em contato comigo!</button>
 
             <div id='socialMedias' className="flex gap-3 items-center mt-4 md:mt-0">
@@ -87,7 +87,7 @@ export default function Home() {
       </div>
 
       <section id="technologies" className="w-full text-center">
-        <h3 className="text-4xl mb-12 underline underline-offset-3">Tecnologias e Ferramentas</h3>
+        <h3 className="text-3xl sm:text-4xl mx-4 mb-12 underline underline-offset-3">Tecnologias e Ferramentas</h3>
         <div className='flex justify-center'>
           <div className={`mx-8 bg-gray-900 ${tableStyles.tableShadow} ${tableStyles.tableStyle}`}>
             <div>
@@ -126,8 +126,8 @@ export default function Home() {
       </section>
 
       <section>
-        <h3 className="text-4xl underline underline-offset-3 text-center">Projetos</h3>
-        <div className="my-32 grid lg:grid-cols-2 xl:grid-cols-3 md:grid-cols-1 gap-16 mx-8 justify-items-center">
+        <h3 className="text-3xl sm:text-4xl mx-4 underline underline-offset-3 text-center">Projetos</h3>
+        <div className="my-32 grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 mx-8 justify-items-center">
           <ProjectCard
             headerContent={`Império Sofás Estoque`}
             bodyImage={imperioSofasMenu}
@@ -187,24 +187,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section ref={refContact} className='flex flex-col justify-center items-center w-full'>
-        <h3 className="text-4xl underline underline-offset-3 text-center mb-32">Entre em contato comigo!</h3>
-        <div className="items-center max-w-[1200px] bg-gray-900 p-5 rounded-lg w-full">
-          <form action="https://api.staticforms.xyz/submit" method="post" className='w-full'>
+      <section ref={refContact} className='flex flex-col justify-center items-center mx-4 md:mx-8'>
+        <h3 className="text-3xl sm:text-4xl mx-4 underline underline-offset-3 text-center">Entre em contato comigo!</h3>
+
+        <div className="items-center max-w-[1200px] bg-gray-900 p-4 rounded-lg w-full my-32">
+          <form action="https://api.staticforms.xyz/submit" method="post">
 
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex flex-col w-full">
-                <label htmlFor="name">Nome</label>
+                <label htmlFor="name" className='pb-1 '>Nome</label>
                 <input type="text" name="name" id="name" placeholder="Digite o seu nome" autoComplete="off" required />
               </div>
               <div className=" flex flex-col w-full">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email" className='pb-1 '>Email</label>
                 <input type="email" name="email" id="email" placeholder="Digite o seu email" required />
               </div>
             </div>
 
             <div className="mt-8 flex flex-col">
-              <label htmlFor="message">Mensagem</label>
+              <label htmlFor="message" className='pb-1 '>Mensagem</label>
               <textarea rows={6} name="message" id="message" placeholder="Tudo bem?! Vi o seu perfil..." required />
             </div>
 
