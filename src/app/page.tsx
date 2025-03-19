@@ -10,6 +10,7 @@ import TableContent from '@/components/TableContent';
 import ProjectCard from "@/components/ProjectsCard";
 import GenericIcon from "@/components/stacksIcons/GenericIcon";
 import { useRef } from 'react';
+import { TextAnimate } from '@/components/magicui/text-animate';
 
 import {
   imagemTeste, imperioEstoqueCamasEColchoes, imperioEstoqueSofas, imperioSofasMenu,
@@ -20,6 +21,7 @@ import {
   expressIcon, postgresIcon, mongoIcon, dockerIcon, gitHubIcon, gitIcon, postmanIcon,
   wppIcon, linkedinIcon, githubDarkIcon
 } from '@/icons/index.js';
+import { BlurFade } from '@/components/magicui/blur-fade';
 
 const kanit = Kanit({ weight: '400', subsets: ['latin'] })
 const waveEmoji = <span role="img" aria-label="waveHand">👋</span>
@@ -37,41 +39,52 @@ export default function Home() {
       <section className="apresentation">
         <div className="max-w-5xl mx-4">
           <div className="text-center">
-            <h3 className="text-lg md:text-2xl lg:text-3xl xl:text-4xl">Olá! {waveEmoji}</h3>
-            <h2 className="text-xl md:text-3xl lg:text-3xl xl:text-5xl">Eu me chamo Guilherme Souza</h2>
-            <h3 className={"text-xl md:text-2xl lg:text-3xl  text-hotyellow"}>Desenvolvedor Fullstack</h3>
+            <h3 className="text-lg md:text-2xl lg:text-3xl xl:text-4xl">
+              <TextAnimate duration={0.4}> Olá! 👋</TextAnimate></h3>
+            <h2 className="text-xl md:text-3xl lg:text-3xl xl:text-5xl">
+              <TextAnimate duration={0.4 * 2}>
+                Eu me chamo Guilherme Souza
+              </TextAnimate>
+            </h2>
+            <h3 className={"text-xl md:text-2xl lg:text-3xl  text-hotyellow"}>
+              <TextAnimate duration={0.4 * 3}>
+                Desenvolvedor Fullstack
+              </TextAnimate>
+            </h3>
           </div>
 
-          <p className="text-md mt-16 lg:text-lg xl:text-xl text-justify">
+          <TextAnimate animation='slideUp' by='word' duration={0.4 * 4} once className="text-md mt-16 lg:text-lg xl:text-xl text-justify">
             Entusiasta em construir sistemas e criar soluções criativas sempre com foco no usuário final, encontro
             motivação transformando boas ideias em realidade.
-          </p>
+          </TextAnimate>
 
-          <div className="flex flex-col sm:flex-row items-center w-full justify-between align-middle mt-6 md:mt-8">
-            <button className="btnStyle"
-              onClick={scrollToContactSection}>Entre em contato comigo!</button>
+          <BlurFade inView delay={0.4 * 2}>
+            <div className="flex flex-col sm:flex-row items-center w-full justify-between align-middle mt-6 md:mt-8">
+              <button className="btnStyle"
+                onClick={scrollToContactSection}>Entre em contato comigo!</button>
 
-            <div id='socialMedias' className="flex gap-3 items-center mt-4 md:mt-0">
-              <div id='linkedinIcon'>
-                <a href="https://www.linkedin.com/in/Guilhsouza" target="_blank">
-                  <Image alt="Linkedin icon" src={linkedinIcon} width={40} className="rounded-lg" />
-                </a>
-              </div>
-              <div id='githubIcon'>
-                <a href="https://github.com/Guilhsouza" target="_blank">
-                  <Image alt="GitHub icon" src={githubDarkIcon} width={40} className="rounded-lg" />
-                </a>
-              </div>
-              <div id='wppIcon'>
-                <a href="http://wa.me/5512991112772" target="_blank">
-                  <Image alt="Wpp icon" src={wppIcon} width={40} />
-                </a>
+              <div id='socialMedias' className="flex gap-3 items-center mt-4 md:mt-0">
+                <div id='linkedinIcon'>
+                  <a href="https://www.linkedin.com/in/Guilhsouza" target="_blank">
+                    <Image alt="Linkedin icon" src={linkedinIcon} width={40} className="rounded-lg" />
+                  </a>
+                </div>
+                <div id='githubIcon'>
+                  <a href="https://github.com/Guilhsouza" target="_blank">
+                    <Image alt="GitHub icon" src={githubDarkIcon} width={40} className="rounded-lg" />
+                  </a>
+                </div>
+                <div id='wppIcon'>
+                  <a href="http://wa.me/5512991112772" target="_blank">
+                    <Image alt="Wpp icon" src={wppIcon} width={40} />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          </BlurFade>
         </div>
 
-        <div className={`${styles.imageWrapper}`}>
+        <BlurFade inView delay={0.4 * 1} className={`${styles.imageWrapper}`}>
           <Image
             alt="Minha foto"
             src={imagemTeste}
@@ -79,8 +92,9 @@ export default function Home() {
             priority
             className={`rounded-full border-hotyellow border-2 ${styles.imageShadow}`}
           />
-        </div>
-      </section>
+        </BlurFade>
+
+      </section >
 
       <div className="mt-4 mb-36 flex justify-center">
         <ScrollArrow />
