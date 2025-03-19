@@ -24,7 +24,6 @@ import {
 import { BlurFade } from '@/components/magicui/blur-fade';
 
 const kanit = Kanit({ weight: '400', subsets: ['latin'] })
-const waveEmoji = <span role="img" aria-label="waveHand">👋</span>
 
 export default function Home() {
   const refContact = useRef<HTMLDivElement | null>(null)
@@ -40,25 +39,28 @@ export default function Home() {
         <div className="max-w-5xl mx-4">
           <div className="text-center">
             <h3 className="text-lg md:text-2xl lg:text-3xl xl:text-4xl">
-              <TextAnimate duration={0.4}> Olá! 👋</TextAnimate></h3>
+              <TextAnimate once duration={0.4}>
+                Olá! 👋
+              </TextAnimate>
+            </h3>
             <h2 className="text-xl md:text-3xl lg:text-3xl xl:text-5xl">
-              <TextAnimate duration={0.4 * 2}>
+              <TextAnimate once duration={0.4 * 2}>
                 Eu me chamo Guilherme Souza
               </TextAnimate>
             </h2>
-            <h3 className={"text-xl md:text-2xl lg:text-3xl  text-hotyellow"}>
-              <TextAnimate duration={0.4 * 3}>
-                Desenvolvedor Fullstack
+            <h3 className={"text-xl md:text-2xl lg:text-3xl text-hotyellow"}>
+              <TextAnimate once duration={0.4 * 2}>
+                ‎ Desenvolvedor Fullstack
               </TextAnimate>
             </h3>
           </div>
 
-          <TextAnimate animation='slideUp' by='word' duration={0.4 * 4} once className="text-md mt-16 lg:text-lg xl:text-xl text-justify">
+          <TextAnimate animation='slideUp' by='word' duration={0.4 * 3} once className="text-md mt-16 lg:text-lg xl:text-xl text-justify">
             Entusiasta em construir sistemas e criar soluções criativas sempre com foco no usuário final, encontro
             motivação transformando boas ideias em realidade.
           </TextAnimate>
 
-          <BlurFade inView delay={0.4 * 2}>
+          <BlurFade inView delay={0.4} blur='0px' direction='up'>
             <div className="flex flex-col sm:flex-row items-center w-full justify-between align-middle mt-6 md:mt-8">
               <button className="btnStyle"
                 onClick={scrollToContactSection}>Entre em contato comigo!</button>
@@ -84,7 +86,7 @@ export default function Home() {
           </BlurFade>
         </div>
 
-        <BlurFade inView delay={0.4 * 1} className={`${styles.imageWrapper}`}>
+        <BlurFade inView delay={0.4} className={`${styles.imageWrapper}`} blur='0px' direction='up'>
           <Image
             alt="Minha foto"
             src={imagemTeste}
