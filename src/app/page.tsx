@@ -9,7 +9,7 @@ import tableStyles from '@/css/stacksTableStyles.module.css';
 import TableContent from '@/components/TableContent';
 import ProjectCard from "@/components/ProjectsCard";
 import GenericIcon from "@/components/stacksIcons/GenericIcon";
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { TextAnimate } from '@/components/magicui/text-animate';
 
 import {
@@ -27,6 +27,12 @@ const kanit = Kanit({ weight: '400', subsets: ['latin'] })
 
 export default function Home() {
   const refContact = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
 
   const scrollToContactSection = () => {
     refContact.current?.scrollIntoView({ behavior: 'smooth' })
