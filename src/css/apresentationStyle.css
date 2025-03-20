@@ -25,6 +25,22 @@
     transition: 0.3s;
 }
 
+.btnContactMe {
+    margin-top: 1.5rem;
+    background-color: #ffd966;
+    color: #000;
+    padding: 0.9rem;
+    border-radius: 8px;
+    width: 100%;
+    transition: .3s;
+}
+
+.btnContactMe:hover {
+    background-color: #ccac4d;
+    color: #000;
+    transition: .3s;
+}
+
 @media (min-width: 768px) {
     .apresentation {
         flex-direction: row;

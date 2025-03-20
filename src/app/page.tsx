@@ -243,7 +243,7 @@ export default function Home() {
             </div>
 
             <button type="submit"
-              className="mt-6 bg-blue-500 text-white px-6 py-3 rounded-lg w-full hover:bg-blue-600 transition">Enviar Mensagem!</button>
+              className="btnContactMe">Enviar Mensagem!</button>
 
             <input type="hidden" name="accessKey" value="8acca2e0-0223-4fdd-b3bd-c6271ac665f3" />
             <input type="hidden" name="redirectTo" value={"https://my-portfolio-nu-orpin-23.vercel.app/thanks"} />
