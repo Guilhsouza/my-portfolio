@@ -3,6 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Guilherme Souza | Fullstack Developer",
+  icons: "./favicon/icon.png"
 };
 
 export default function RootLayout({
