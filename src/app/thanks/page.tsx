@@ -4,7 +4,7 @@ import '../../css/apresentationStyle.css'
 import { useEffect } from 'react';
 const kanit = Kanit({ weight: '400', subsets: ['latin'] })
 
-export default function thanks() {
+export default function Thanks() {
     useEffect(() => {
         if (typeof window !== "undefined") {
             document.documentElement.classList.add("dark");
