@@ -1,8 +1,16 @@
+'use client'
 import { Kanit } from 'next/font/google';
 import '../../css/apresentationStyle.css'
+import { useEffect } from 'react';
 const kanit = Kanit({ weight: '400', subsets: ['latin'] })
 
 export default function thanks() {
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            document.documentElement.classList.add("dark");
+        }
+    }, []);
+
     return (
         <>
             <div className={`${kanit.className} flex flex-col justify-center items-center h-screen w-full`}>
