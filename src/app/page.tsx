@@ -14,7 +14,10 @@ import { TextAnimate } from '@/components/magicui/text-animate';
 
 import {
   imagemTeste, imperioEstoqueCamasEColchoes, imperioEstoqueSofas, imperioSofasMenu,
-  postmanApiEstoque, swagger1, swagger2, githubPdv, pdvPostman, prsDoPdv
+  postmanApiEstoque, swagger1, swagger2, githubPdv, pdvPostman, prsDoPdv,
+  inicioCasamento,
+  presenca,
+  presentes
 } from '@/images/index';
 import {
   javaIcon, htmlIcon, cssIcon, reactIcon, nextIcon, tailwindIcon, nodeIcon,
@@ -162,11 +165,37 @@ export default function Home() {
         <BlurFade inView delay={0.4} blur='1px' direction='up'>
           <div className="my-32 grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 mx-8 justify-items-center">
             <ProjectCard
+
+              headerContent={`Casamento Suelen e André`}
+              bodyImage={inicioCasamento}
+              image2={presentes}
+              image3={presenca}
+              altImage='Menu Império Sofás'
+              imageType={'mobile'}
+              siteLink='https://casamento-suelen-andre.vercel.app/'
+              stacks={
+                [
+                  <GenericIcon bgColor={'#3178C6'} fontColor={"#fff"} iconName="Typescript" key={31} />,
+                  <GenericIcon bgColor={'#61DAFB'} fontColor={"#030609"} iconName="React" key={32} />,
+                  <GenericIcon bgColor={'#030609'} fontColor={"#fff"} iconName="NextJS" key={33} />,
+                  <GenericIcon bgColor={'#F0DB4F'} fontColor={"#030609"} iconName="Dotenv" key={34} />,
+                  <GenericIcon bgColor={'#334155'} fontColor={"#fff"} iconName="Tailwind CSS" key={35} />,
+                  <GenericIcon bgColor={'#F7DF1E'} fontColor={"#030609"} iconName="Framer Motion" key={36} />,
+                ]}
+              description="Este projeto foi desenvolvido como presente de casamento para um casal de amigos.
+              O site foi criado com foco em simplicidade, leveza, animações suaves e total responsividade.
+              Permitindo a confirmação de presença com envio automático das informações para o e-mail do casal, além da opção de enviar presentes 
+              via Pix com geração de QR Code de forma segura.
+              " />
+            <ProjectCard
+
               headerContent={`Império Sofás Estoque`}
               bodyImage={imperioSofasMenu}
               image2={imperioEstoqueSofas}
               image3={imperioEstoqueCamasEColchoes}
               altImage='Menu Império Sofás'
+              imageType={'desktop'}
+              siteLink={'https://imperio-estoque.vercel.app/'}
               stacks={
                 [
                   <GenericIcon bgColor={'#61DAFB'} fontColor={"#030609"} iconName="React" key={1} />,
@@ -179,32 +208,15 @@ export default function Home() {
             o projeto entrega controle e praticidade para o lojista no gerenciamento de vendas e estoque, porém, 
             com uma curva de aprendizado mais simples." />
 
-            <ProjectCard headerContent="API de estoque online"
-              bodyImage={postmanApiEstoque}
-              image2={swagger1}
-              image3={swagger2}
-              altImage='Imagem do postman'
-              stacks={[
-                <GenericIcon bgColor={'#F7DF1E'} fontColor={"#030609"} iconName="JavaScript" key={11} />,
-                <GenericIcon bgColor={'#8CC84B'} fontColor={"#030609"} iconName="NodeJS" key={12} />,
-                <GenericIcon bgColor={'#000'} fontColor={"#fff"} iconName="Express.js" key={13} />,
-                <GenericIcon bgColor={'#000'} fontColor={"#fff"} iconName="JWT (JSON Web Token)" key={14} />,
-                <GenericIcon bgColor={'#C21325'} fontColor={"#fff"} iconName="JEST" key={15} />,
-                <GenericIcon bgColor={'#85EA2D'} fontColor={"#030609"} iconName="Swagger" key={17} />,
-                <GenericIcon bgColor={'#FF6C37'} fontColor={"#fff"} iconName="Postman" key={18} />,
-                <GenericIcon bgColor={'#336791'} fontColor={"#fff"} iconName="postgreSQL" key={19} />,
-
-              ]}
-              description={`A principal ideia deste projeto é oferecer operações CRUD de usuário e estoque em um ambiente online.
-              Os usuários podem criar uma conta e fazer operações de estoque, como criar e excluir tabelas, editar os produtos e fazer buscas específicas.
-              Todo esse sistema foi desenvolvido no modelo RESTFUL com autenticação ao usuário e testes unitários.`} />
-
             <ProjectCard
+
               headerContent="API PDV Frente de Caixa"
               bodyImage={pdvPostman}
               image2={githubPdv}
               image3={prsDoPdv}
               altImage='Imagem'
+              imageType={'desktop'}
+              siteLink={'https://github.com/Guilhsouza/pdv-frente-de-caixa'}
               stacks={[
                 <GenericIcon bgColor={'#F7DF1E'} fontColor={"#030609"} iconName="JavaScript" key={21} />,
                 <GenericIcon bgColor={'#8CC84B'} fontColor={"#030609"} iconName="NodeJS" key={22} />,

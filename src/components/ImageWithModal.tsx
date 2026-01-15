@@ -14,16 +14,19 @@ interface ImageWIthModalBody {
     bodyImage: string | StaticImageData,
     image2: string | StaticImageData,
     image3: string | StaticImageData,
-    altImage: string
+    altImage: string,
+    imageType: 'desktop' | 'mobile'
 }
 
 
-const ImageWithModal: React.FC<ImageWIthModalBody> = ({ bodyImage, image2, image3, altImage }) => {
+const ImageWithModal: React.FC<ImageWIthModalBody> = ({ bodyImage, image2, image3, altImage, imageType }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const openModal = () => setIsOpen(true);
 
     const closeModal = () => setIsOpen(false);
+
+    const imgType = imageType === 'desktop' ? 'aspect-video' : 'aspect-[9/16]'
 
     const images = [
         bodyImage,
@@ -38,12 +41,12 @@ const ImageWithModal: React.FC<ImageWIthModalBody> = ({ bodyImage, image2, image
     return (
         <>
             <div>
-                <div>
+                <div className='relative w-full aspect-video overflow-hidden rounded-lg cursor-pointer' onClick={openModal}>
                     <Image
                         src={bodyImage}
                         alt={altImage}
-                        className="rounded-lg h-72 lg:h-64 xl:h-64 2xl:h-80 cursor-pointer"
-                        onClick={openModal}
+                        fill
+                        className="object-cover"
                     />
                 </div>
 
@@ -60,7 +63,7 @@ const ImageWithModal: React.FC<ImageWIthModalBody> = ({ bodyImage, image2, image
                                 {images.map((image, index) => (
                                     <CarouselItem key={index} >
                                         <div className="flex justify-center">
-                                            <div className="overflow-hidden">
+                                            <div className={`relative w-full max-h-[80vh] overflow-hidden ${imgType}`}>
                                                 <Image
                                                     src={image}
                                                     alt={`imagem ${index + 1}`}

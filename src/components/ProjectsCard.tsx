@@ -10,10 +10,12 @@ interface ProjectCardBody {
     image3: string | StaticImageData,
     altImage: string,
     stacks: ReactNode[],
-    description: string
+    description: string,
+    imageType: 'desktop' | 'mobile',
+    siteLink: string
 }
 
-const ProjectCard: React.FC<ProjectCardBody> = ({ headerContent, bodyImage, image2, image3, altImage, stacks, description }) => {
+const ProjectCard: React.FC<ProjectCardBody> = ({ headerContent, bodyImage, image2, image3, altImage, stacks, description, imageType, siteLink }) => {
     return (
         <>
             <Card className="p-2 max-w-[600px] flex-col bg-gray-900 rounded-lg">
@@ -26,14 +28,23 @@ const ProjectCard: React.FC<ProjectCardBody> = ({ headerContent, bodyImage, imag
                         image2={image2}
                         image3={image3}
                         altImage={altImage}
+                        imageType={imageType}
                     />
-                    <div className="flex flex-wrap gap-2 mt-4 pb-2 md:pb-1">
+                    <div className="flex flex-wrap gap-2 my-4 pb-2 md:pb-1">
                         {stacks}
                     </div>
                 </CardBody>
                 <CardFooter className="text-justify h-full flex self-center p-2">
                     {description}
                 </CardFooter>
+                <div className="text-center w-full">
+                    <p className="text-hotyellow">
+                        <a
+                            href={siteLink} target="_blank">
+                            Clique para acessar a aplicação!
+                        </a>
+                    </p>
+                </div>
             </Card>
         </>
     )
