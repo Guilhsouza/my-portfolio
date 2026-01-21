@@ -14,7 +14,7 @@ import { TextAnimate } from '@/components/magicui/text-animate';
 
 import {
   imagemTeste, imperioEstoqueCamasEColchoes, imperioEstoqueSofas, imperioSofasMenu,
-  postmanApiEstoque, swagger1, swagger2, githubPdv, pdvPostman, prsDoPdv,
+  githubPdv, pdvPostman, prsDoPdv,
   inicioCasamento,
   presenca,
   presentes

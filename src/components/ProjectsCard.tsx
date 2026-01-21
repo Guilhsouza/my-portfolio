@@ -37,8 +37,8 @@ const ProjectCard: React.FC<ProjectCardBody> = ({ headerContent, bodyImage, imag
                 <CardFooter className="text-justify h-full flex self-center p-2">
                     {description}
                 </CardFooter>
-                <div className="text-center w-full">
-                    <p className="text-hotyellow">
+                <div className="text-center w-full px-4 md:px-24 lg:px-12">
+                    <p className="text-hotyellow p-2 border border-hotyellow cursor-pointer rounded-lg hover:bg-hotyellow hover:text-[#06080a] hover:border-[#06080a] transition">
                         <a
                             href={siteLink} target="_blank">
                             Clique para acessar a aplicação!

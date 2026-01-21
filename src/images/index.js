@@ -10,7 +10,7 @@ import prsDoPdv from './prsDoPdv.png'
 import githubPdv from './githubPDV.png'
 import inicioCasamento from './suelen-andre-inicio.jpeg'
 import presenca from './presenca.jpeg'
-import presentes from './presentes.jpeg'
+import presentes from './presentes.png'
 
 export {
     imperioEstoqueSofas,
